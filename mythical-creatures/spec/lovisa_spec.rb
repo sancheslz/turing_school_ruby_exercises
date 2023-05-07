@@ -1,4 +1,4 @@
-require 'rspec'
+require './spec/spec_helper'
 require './lib/lovisa'
 
 RSpec.describe Lovisa do

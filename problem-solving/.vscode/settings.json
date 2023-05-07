@@ -1,0 +1,12 @@
+{
+  "emeraldwalk.runonsave": {
+    "autoClearConsole": true,
+    "commands": [
+      {
+        "cmd": "rspec ${fileDirname}/../spec/${fileBasenameNoExt}_spec.rb",
+        "match": ".*.rb",
+        "notMatch": ".*_spec.rb"
+      }
+    ]
+  }
+}

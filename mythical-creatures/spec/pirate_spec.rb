@@ -1,4 +1,4 @@
-require 'rspec'
+require './spec/spec_helper'
 require './lib/pirate'
 
 RSpec.describe Pirate do

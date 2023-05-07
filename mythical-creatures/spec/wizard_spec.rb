@@ -1,4 +1,4 @@
-require 'rspec'
+require './spec/spec_helper'
 require './lib/wizard'
 
 RSpec.describe Wizard do
@@ -34,19 +34,34 @@ RSpec.describe Wizard do
 
   it 'starts rested' do
     # create wizard
+    wizard = Wizard.new('Harry')
+
     # .rested? returns true
+    expect(wizard.rested?).to be true
   end
 
   it 'can cast spells' do
     # create wizard
+    wizard = Wizard.new('Otho')
+
     # .cast returns "MAGIC MISSILE!"
+    expect(wizard.cast).to eq('MAGIC MISSILE!')
   end
 
   it 'gets tired after casting three spells' do
     # create wizard
+    wizard = Wizard.new('John')
+
     # casts spell twice
+    2.times { wizard.cast }
+
     # check if wizard is rested
+    expect(wizard.rested?).to be true
+
     # casts spell
+    wizard.cast
+
     # check wizard is not rested
+    expect(wizard.rested?).to be false
   end
 end
